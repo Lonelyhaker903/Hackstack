@@ -1,0 +1,267 @@
+/* General Styling */
+.container, .dashboardContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #0d0d1f;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh; /* Full height */
+  background: #1b1b3a;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align the content at the top */
+}
+
+.sidebar h2 {
+  color: cyan;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li:hover,
+.sidebar .active {
+  background: #25255a;
+  color: white;
+  font-weight: bold;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+
+/* Main Content Area */
+.mainContent {
+  margin-left: 250px; /* Match sidebar width */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 1px;
+  background: #6a5acd;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header h2 {
+  color: cyan;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Profile container - placed at the end of the header */
+.profileContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Profile image */
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid cyan;
+  cursor: pointer;
+}
+
+/* Dropdown menu styles */
+.dropdownMenu {
+  position: absolute;
+  top: 45px; /* Adjust to position the dropdown below the profile */
+  right: 0;
+  background-color: #1b1b3a;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.profileContainer:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown list items */
+.dropdownMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdownMenu li {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdownMenu li:hover {
+  background-color: #25255a;
+}
+
+/* Content Wrapper */
+.content {
+  flex-grow: 1;
+  padding: 22px;
+  background-color: #f5f7fa; /* Light background for contrast */
+  border-radius: 8px;
+  color: black;
+  overflow-y: auto;
+}
+
+/* Dashboard Sections */
+.progress, .team, .leaderboard {
+  padding: 22px;
+  border-radius: 8px;
+  color: white;
+}
+
+.progress {
+  background: #6d6db5;
+}
+
+.progress h3, .team h3, .leaderboard h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: cyan;
+}
+
+.progressBar {
+  background: #e8d6d6;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progressFill {
+  height: 100%;
+  background: cyan;
+  text-align: center;
+  line-height: 12px;
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
+
+/* Team Members */
+.team {
+  background: #87c0e1;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.member img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid cyan;
+}
+
+.member span {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Leaderboard */
+.leaderboard {
+  background: #25255a;
+}
+
+.leaderboard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.leaderboard li {
+  padding: 6px 0;
+  font-size: 16px;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .mainContent {
+    margin-left: 200px;
+  }
+
+  .header {
+    width: calc(100% - 200px);
+  }
+
+  .logoutButton {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .mainContent {
+    margin-left: 180px;
+  }
+
+  .header {
+    width: calc(100% - 180px);
+  }
+}

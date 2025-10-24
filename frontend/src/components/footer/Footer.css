@@ -1,0 +1,97 @@
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.footer-heading {
+  text-align: left;
+}
+
+.footer-heading h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  color: #3498db;
+}
+
+.footer-heading p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.footer-right {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-column {
+  margin: 0 20px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #3498db;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 10px 0;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #3498db;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #3498db;
+}
+
+.social-links svg {
+  margin-right: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

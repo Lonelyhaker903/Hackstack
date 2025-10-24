@@ -1,0 +1,172 @@
+/* 🌟 Student Dashboard Styles */
+.student-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  box-shadow: 0 4px 20px rgba(249, 247, 247, 0.988);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 🔥 Background Animation */
+.student-dashboard-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.771) 10%, transparent 70%);
+  animation: moveBackground 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  50% {
+    transform: rotate(180deg) translateX(20px);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0);
+  }
+}
+
+/* 🏆 Dashboard Title */
+.dashboard-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #ffcc00, #ff6600);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1.5s ease-in-out, glowText 3s infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0px 0px 5px rgba(255, 204, 0, 0.5);
+  }
+  to {
+    text-shadow: 0px 0px 20px rgba(255, 102, 0, 0.8);
+  }
+}
+
+/* 🎉 Dashboard Content */
+.dashboard-content {
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgb(255, 255, 255);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dashboard-content:hover {
+  transform: scale(1.02);
+}
+
+/* 👏 Welcome Message */
+.welcome-message p {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.9;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+/* 📌 Hackathon Info */
+.hackathon-info h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.hackathon-info p {
+  font-size: 16px;
+  opacity: 0.8;
+  transition: color 0.3s ease-in-out;
+}
+
+.hackathon-info:hover p {
+  color: #ff6600;
+}
+
+/* 🔥 Motivational Quote */
+.motivational-quote blockquote {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ffcc;
+  border-left: 5px solid #00ffcc;
+  padding-left: 15px;
+  margin-top: 15px;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+/* 📢 Call to Action */
+.call-to-action h2 {
+  font-size: 22px;
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.call-to-action p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* 🚀 Neon Button */
+
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0px 0px 10px rgba(255, 102, 0, 0.8);
+  }
+  to {
+    box-shadow: 0px 0px 20px rgba(255, 102, 0, 1);
+  }
+}
+
+/* 🎬 Fade Up Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📌 Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .dashboard-content {
+    max-width: 90%;
+  }
+
+  .dashboard-title {
+    font-size: 28px;
+  }
+
+  .motivational-quote blockquote {
+    font-size: 18px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+  }
+}

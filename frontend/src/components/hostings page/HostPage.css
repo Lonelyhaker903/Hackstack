@@ -1,0 +1,70 @@
+.host-container {
+    padding: 50px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .host-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+  
+  .roadmap-container {
+    margin-top: -150px; 
+    margin-bottom: 30px;
+  }
+  
+  .roadmap-text {
+    font-size: 14px;
+    fill: rgb(253, 4, 4);
+    text-anchor: middle; 
+  }
+  
+  .host-timing-title {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .host-timing-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .host-timing-label {
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .host-timing-label-text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .host-timing-description {
+    font-size: 16px;
+    margin: 10px 0;
+    max-width: 500px; 
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+  
+  .host-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .host-btn:hover {
+    background-color: #0056b3;
+  }
+
+  
+  

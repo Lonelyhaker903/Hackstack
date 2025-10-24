@@ -1,0 +1,123 @@
+/* login.css */
+
+/* General page styling */
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Bubble animation styling */
+  .bubble {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  /* Bubble animation keyframes */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add specific positions for bubbles */
+  .bubble1 {
+    top: 20%;
+    left: 15%;
+  }
+  .bubble2 {
+    top: 40%;
+    left: 25%;
+  }
+  .bubble3 {
+    top: 60%;
+    left: 10%;
+  }
+  .bubble4 {
+    top: 30%;
+    left: 75%;
+  }
+  .bubble5 {
+    top: 50%;
+    left: 80%;
+  }
+  .bubble6 {
+    top: 70%;
+    left: 60%;
+  }
+  .bubble7 {
+    top: 80%;
+    left: 20%;
+  }
+  .bubble8 {
+    top: 15%;
+    left: 50%;
+  }
+  .bubble9 {
+    top: 25%;
+    left: 65%;
+  }
+  .bubble10 {
+    top: 45%;
+    left: 35%;
+  }
+  
+  /* Centering label and buttons container */
+  .login-options-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 40px 30px;
+  }
+  
+  .login-options-container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Buttons styling */
+  .login-option-btn {
+    margin: 10px;
+    padding: 12px 10px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(145deg, #32a5f7, #1186e5);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 -4px 6px rgba(255, 255, 255, 0.1) inset;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover and 3D effect */
+/* Button hover effect for decreasing size */
+.login-option-btn:hover {
+    transform: scale(0.9) translateY(3px); /* Slightly reduce the size and move it downward */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -3px 5px rgba(255, 255, 255, 0.1) inset;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Button active effect */
+.login-option-btn:active {
+    transform: scale(0.8); /* Further decrease size slightly when clicked */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 -2px 3px rgba(255, 255, 255, 0.1) inset;
+    transition: all 0.1s ease-in-out;
+}

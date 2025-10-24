@@ -1,0 +1,69 @@
+/* Main container styling */
+.container {
+  width: auto; /* Sets maximum width for the container */
+  margin: 20px auto; /* Centers the container horizontally and adds top margin */
+  padding: 20px; /* Adds internal spacing */
+  background-color: white; /* Sets a white background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  border-radius: 8px; /* Rounds the corners */
+  overflow-x: auto; /* Enables horizontal scrolling if the table is wider */
+  font-family: Arial, sans-serif;
+  text-align: center; /* Centers the content inside the container */
+}
+
+/* Registration table styling */
+.registration-table {
+  margin: 0 auto; /* Centers the table horizontally */
+  border-collapse: collapse; /* Removes gaps between cells */
+  margin-top: 20px; /* Adds space between the heading and the table */
+}
+
+.registration-table th,
+.registration-table td {
+  padding: 12px; /* Adds padding for a clean look */
+  border: 1px solid #ddd; /* Light border between cells */
+  text-align: center; /* Centers the text in all cells */
+}
+
+.registration-table th {
+  background-color: #007bff; /* Blue background for headers */
+  color: white; /* White text for headers */
+  font-weight: bold;
+  text-transform: uppercase; /* Makes header text uppercase */
+}
+
+.registration-table td {
+  font-size: 14px; /* Sets font size for better readability */
+}
+
+/* Button styling */
+button {
+  padding: 8px 12px; /* Adjusted button size */
+  background-color: #007bff; /* Blue button color */
+  color: white; /* White text */
+  border: none; /* Removes borders */
+  border-radius: 4px; /* Rounds button corners */
+  cursor: pointer; /* Pointer cursor for buttons */
+  font-size: 14px; /* Matches the table text */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Back button styling */
+.back-button {
+  display: block;
+  margin: 20px auto; /* Centers the button horizontally */
+  padding: 10px 20px;
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  border: none; /* Removes borders */
+  border-radius: 4px; /* Rounds corners */
+  font-size: 14px;
+  cursor: pointer; /* Pointer cursor for the back button */
+}
+
+.back-button:hover {
+  background-color: #333; 
+}

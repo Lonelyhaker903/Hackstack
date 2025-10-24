@@ -1,0 +1,59 @@
+.welcome-box {
+    background: linear-gradient(to right, black, gray);
+    color: white;
+    padding: 200px 200px; /* Adjust padding */
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 135px);
+    transform: translate(-50%, -50%);
+    width: 60%;
+    min-width: 400px;
+    max-width: 800px;
+}
+
+/* Flexbox layout for left logo & right text */
+.welcome-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo Styling */
+.college-logo {
+    width: 180px ; /* Adjust size */
+    height: 150px;
+    margin-right: 10px; /* Spacing between logo and text */
+}
+
+/* Text Content Styling */
+.text-content {
+    flex: 1; /* Takes remaining space */
+}
+
+.animated-heading {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.welcome-box p {
+    color: white !important;
+    text-align: left;
+}
+
+/* Blinking Dots (Keeps Your Previous Animation) */
+.blinking-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,89 @@
+/* Organizer Authentication Styles */
+.organiser-container {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .organiser-title-box {
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .organiser-login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .organiser-input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .organiser-input-group label {
+    font-weight: bold;
+    width: 30%;
+    text-align: left;
+  }
+  
+  .organiser-input-group input {
+    width: 65%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f6ff;
+  }
+  
+  .organiser-form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .organiser-checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .organiser-checkbox-container input {
+    margin-right: 5px;
+    accent-color: blue;
+  }
+  
+  .organiser-forgot-password {
+    color: blue;
+    cursor: pointer;
+  }
+  
+  .organiser-login-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .organiser-signup-text {
+    margin-top: 15px;
+  }
+  
+  .organiser-signup-link {
+    color: blue;
+    cursor: pointer;
+    font-weight: bold;
+  }

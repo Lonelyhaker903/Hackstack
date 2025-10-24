@@ -1,0 +1,176 @@
+/* Main Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #1E2A5E;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Left Side: Logo, Hackathons, and Resource */
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 40px; /* Adjust as needed */
+  cursor: pointer;
+}
+
+.menu-item {
+  position: relative;
+  cursor: pointer;
+  padding: 10px 15px;
+  color: white;
+}
+
+.menu-item:hover {
+  background-color: #0056b3;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #7C93C3;
+  border-radius: 4px;
+  min-width: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #0056b3;
+}
+
+.menu-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Right Side: Search bar, Host button, and profile picture/login button */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-bar {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+  transition: width 0.3s ease;
+  color: white;
+  background-color: transparent;
+}
+
+.search-bar::placeholder {
+  color: #ddd;
+}
+
+.login-btn {
+  background-color: #68c5f7;
+  color: rgb(245, 246, 247);
+  border: 1px solid #1E2A5E;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #18234C;
+  border-color: #1dcfe7;
+}
+
+/* Mobile Hamburger Menu */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+/* Mobile Menu Dropdown */
+.mobile-menu {
+  position: absolute;
+  top: 60px; /* Position below header */
+  right: 0;
+  background-color: #1E2A5E;
+  padding: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.mobile-menu-item {
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.mobile-menu-item:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .left-side {
+    display: none; /* Hide left-side items on mobile */
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  /* Show hamburger on mobile */
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  /* Ensure mobile menu displays */
+  .mobile-menu-item {
+    font-size: 18px;
+  }
+}
+
+.host-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.host-btn:hover {
+  background-color: #0056b3;
+}

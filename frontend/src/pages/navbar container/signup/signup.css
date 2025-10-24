@@ -1,0 +1,229 @@
+/* Container and animated background */
+.signup-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #330867, #30cfd0);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated background shapes */
+.signup-container::before,
+.signup-container::after {
+    content: '';
+    position: absolute;
+    width: 150vmax;
+    height: 150vmax;
+    top: -80vmax;
+    left: -50vmax;
+    z-index: 0;
+    opacity: 0.5;
+    border-radius: 40%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: rotate 25s linear infinite;
+}
+
+.signup-container::after {
+    width: 140vmax;
+    height: 140vmax;
+    top: -70vmax;
+    left: -40vmax;
+    background: rgba(255, 255, 255, 0.15);
+    animation: rotate 45s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Floating bubbles */
+.bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.bubble:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    left: 60%;
+    animation-delay: 4s;
+}
+
+.bubble:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 80%;
+    animation-delay: 6s;
+}
+
+.bubble:nth-child(5) {
+    width: 150px;
+    height: 80px;
+    left: 10%;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(6) {
+    width: 60px;
+    height: 60px;
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(7) {
+    width: 75px;
+    height: 100px;
+    left: 60%;
+    animation-delay: 4s;
+}
+
+.bubble:nth-child(8) {
+    width: 95px;
+    height: 50px;
+    left: 80%;
+    animation-delay: 6s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Form styling */
+.signup-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    position: relative;
+    z-index: 1;
+}
+
+.signup-heading {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Input styling */
+.signup-input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.signup-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signup-input:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.signup-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Button styling */
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #30cfd0, #330867);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(48, 207, 208, 0.4);
+    background: linear-gradient(45deg, #330867, #30cfd0);
+}
+
+/* Login link styling */
+.signup-login-text {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signup-login-link {
+    color: #ff4444;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.signup-login-link:hover {
+    color: #ff6666;
+    text-shadow: 0 0 8px rgba(255, 68, 68, 0.6);
+}
+
+/* Date input styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(2);
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .signup-form {
+        padding: 20px;
+    }
+    
+    .signup-heading {
+        font-size: 2rem;
+    }
+}
